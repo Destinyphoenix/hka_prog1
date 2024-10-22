@@ -1,39 +1,40 @@
 class Table{
-    boolean filled;
-    int length;		//in px
-    int width;		//in px
+    String color;		//color
+    boolean filled;     //filled?
+    int length;		    //in px
+    int width;		    //in px
 }
 
 class Circle{
-    String color;		//Farbe
-    boolean filled;
-    float xPos;		//in px
-    float yPos;		//in px
-    int radius;		//in px
+    String color;		//color
+    boolean filled;     //filled?
+    float xPos;		    //in px
+    float yPos;		    //in px
+    int radius;		    //in px
 
 }
 
 class Triangle{
-    String color;		//Farbe
-    boolean filled;
-    float xPos;		//in px
-    float yPos;		//in px
-    int length;		//in px
+    String color;		//color
+    boolean filled;     //filled?
+    float xPos;		    //in px
+    float yPos;		    //in px
+    int length;		    //in px
 }
 
 class Square{
-    String color;		//Farbe
-    boolean filled;
-    float xPos;		//in px
-    float yPos;		//in px
-    int length;		//in px
+    String color;		//color
+    boolean filled;     //filled?
+    float xPos;		    //in px
+    float yPos;		    //in px
+    int length;		    //in px
 }
 
 class Rectangle{
-    String color;		//Farbe
-    boolean filled;
-    float xPos;		//in px
-    float yPos;		//in px
+    String color;		//color
+    boolean filled;     //filled?
+    float xPos;		    //in px
+    float yPos;		    //in px
     int xlength;		//in px
     int ywidth; 		//in px
 }
