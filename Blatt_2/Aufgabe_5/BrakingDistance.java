@@ -13,11 +13,6 @@ class BrakingDistance{
 
     }
 public static double calculateBrakingDistance(double v){
-    int ergI = (int)((v/10)*(v/10));
-    double ergD = (double)((v/10)*(v/10));
-    float ergF = (float)((v/10)*(v/10));
-    byte ergB = (byte)((v/10)*(v/10));
-     System.out.println("int: "+ergI+ " d "+ergD+" f: "+ergF+" b: "+ergB);
-        return ((v/10)*(v/10));
+       return ((v/10.0)*(v/10.0));
         }
 }
