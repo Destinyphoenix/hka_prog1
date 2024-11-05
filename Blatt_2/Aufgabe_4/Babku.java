@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import javax.xml.stream.events.StartElement;
 public class Babku{
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -13,7 +12,6 @@ public class Babku{
         int children;
         int adults;
 
-        System.out.println(Math.PI);
         System.out.println("insert grill diameter in cm");
         grill = scan.nextDouble();
 
@@ -33,10 +31,10 @@ public class Babku{
 
     }
     public static double maxHalloumi(double d, Halloumi h){
-        return ((Math.PI*d)/(h.width*h.length));
+        return ((Math.PI* Math.pow((d/2.0),2))/(h.width*h.length));
     }
     public static int neededGrillFillings(double hMaxPerServe, int neededH){
-        return (int)(neededH /hMaxPerServe);
+        return (int)(Math.floor(neededH /hMaxPerServe)); //runden
     }
 }
 
