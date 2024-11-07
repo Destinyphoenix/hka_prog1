@@ -1,0 +1,23 @@
+Frage:
+Überlegen Sie sich, ob die Reihenfolge der Berechnungsschritte (Multiplikation, Divisionen)
+und/oder die Typen der Variablen einen Einfluss auf das Ergebnis haben kann. Beschreiben
+Sie Situationen, in denen dies der Fall ist.
+
+Berechnungsschritte:
+Da beide Teile der Multiplikation (v/10)*(v/10) equivalent sind und zudem die selbe Variable v nutzen, macht es keinen Unterschied wierum diese ausgeführt werden.
+Auch falls v/10 vorher in einer Variable gespeichert wird, macht es keinen Unterschied (also x = v/10; erg = x*x), falls es sich hierbei um eine float oder double handelt.
+
+Typen:
+Für diesen Teil der Aufgabe habe ich folgende Tests durchgeführt:
+
+setup:
+Erstellung von Ergebnisvariablen für int, double und float, um die Ergebnisse für jeden Typ auszugeben. v wird in einer Schleife bis 1000 inkrementiert.
+
+Test1: v als double
+wie zu erwarten werden bei int die Werte abgerundet angezeigt, bei double und float werden die Nachkommastellen korrekt dagestellt.
+
+Test2: v int
+Es fällt auf, dass es keinen Komma Werte gibt, auch bei double nicht ( dort ist es immer komma 0 )
+
+
+Allgemein macht es bei den Berechnungen Unterschiede, welche Datentypen für die einzelnen Berechnungsschritte genutzt werden, vorallem bei einem Wechsel von double zu int.
