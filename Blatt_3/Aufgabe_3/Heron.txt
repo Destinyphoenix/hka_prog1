@@ -1,0 +1,12 @@
+Gibt es Eingaben, für die im zehnten Schritt noch kein exaktes Ergebnis vorliegt?
+
+    — ja bei sehr großen Zahlen gibt es kein exaktes Ergebnis beim zehnten Schritt.
+
+
+Überlegen Sie sich, ob der Fall eintreten kann, dass Ihr Programm HeronFixpoint nicht
+terminiert, d.h., dass xn+1 = xn nie (d.h. für kein n ∈ N) gilt.
+
+    — Nein, da zwar beispielsweise eine negative Zahl nicht durch die Formel terminiert, da beispielsweise bei a=-1
+      das erste Ergebnis 0 ist und danach -Infinity errechnet wird. Das Programm allerdings terminiert trotzdem, da
+      -Infinity und -Infinity der gleiche Wert ist. Für a=0 terminiert das Programm aufgrund der While-Schleifen-Bedingung
+      sofort.

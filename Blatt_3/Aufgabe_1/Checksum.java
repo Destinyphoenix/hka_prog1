@@ -32,6 +32,6 @@ class Checksum {
     public static String checksumHex(String hex) {
         // convert hex-string to integer
         int intHex = Integer.parseInt(hex, 16);
-        return Integer.toHexString(checksum(intHex, 16));
+        return Integer.toHexString(checksum(intHex, 10));
     }
 }
