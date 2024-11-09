@@ -1,12 +1,12 @@
-package Blatt_3;
+package Blatt_3.Aufgabe_1;
 
 import java.util.Scanner;
 
 class Checksum {
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
         int x;
         String hex;
-        Scanner scan = new Scanner(System.in);
 
         System.out.println("insert your number to calculate checksum: ");
         x = scan.nextInt();
