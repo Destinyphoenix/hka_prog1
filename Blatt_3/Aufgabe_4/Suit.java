@@ -12,9 +12,7 @@ public enum Suit{
             case 2: return Spades;
             case 3: return Hearts;
             case 4: return Diamonds;
-
-            default:
-                return null;
+            default: return null;
         }
     }
 
