@@ -27,8 +27,7 @@ class FormatDemo {
         }
 
         //Als 8-stellige Hexadezimalzahl
-        String Hexzahl = Integer.toHexString(x);
-        Hexzahl = Hexzahl.toUpperCase();
+        String Hexzahl = String.format("%02X", x);
         System.out.print("0x" + Hexzahl + "; ");
 
         //Als 32-stellige Binärzahl
