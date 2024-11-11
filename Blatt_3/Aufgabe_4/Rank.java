@@ -10,10 +10,10 @@ public enum Rank {
     Eight,
     Nine,
     Ten,
-    Jack,
-    Queen,
-    King,
-    Ace;
+    Jack, //Bube
+    Queen, //Dame
+    King,//König
+    Ace; // Ass
 
     public static Rank fromInt(int RankNr){
         switch(RankNr){
