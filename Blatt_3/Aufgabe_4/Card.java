@@ -5,6 +5,7 @@ import java.util.Random;
 public class Card {
     Suit suit;
     Rank rank;
+    static Random randomGenerator;
 
     public Card(int suitNr, int rankNr) {
         suit = Suit.fromInt(suitNr);
@@ -14,11 +15,11 @@ public class Card {
     public String name(){
         return (suit +" "+ rank);
     }
-    public static Card random(){
-        Random random = new Random();
 
-        int rankNr = random.nextInt(2, 14);
-        int suitNr =random.nextInt(1, 4);
+    public static Card random(){
+        randomGenerator = new Random();
+        int rankNr = randomGenerator.nextInt(2, 14);
+        int suitNr =randomGenerator.nextInt(1, 4);
         return new Card(suitNr ,rankNr);
     }
 }
