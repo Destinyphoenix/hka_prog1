@@ -13,7 +13,8 @@ public class Card {
     }
 
     public String name(){
-        return (suit +" "+ rank);
+        return (Suit.fromSuitGerman(suit) +" "+ Rank.fromRankGerman(rank));
+
     }
 
     public static Card random(){

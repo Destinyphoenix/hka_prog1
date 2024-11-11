@@ -15,6 +15,16 @@ public enum Suit{
             default: return null;
         }
     }
+    public static String fromSuitGerman(Suit suit){
+        switch(suit){
+            case Clubs: return "Kreuz";
+            case Spades: return "Pik";
+            case Hearts: return "Herz";
+            case Diamonds: return "Karo";
+            default: return null;
+        }
+
+    }
 
 }
 
