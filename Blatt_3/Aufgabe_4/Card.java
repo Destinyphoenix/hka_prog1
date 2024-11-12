@@ -13,7 +13,7 @@ public class Card {
     }
 
     public String name(){
-        return (Suit.fromSuitGerman(suit) +" "+ Rank.fromRankGerman(rank));
+        return (suit.gName +" "+ rank.gName);
 
     }
 
