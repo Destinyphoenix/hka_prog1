@@ -13,7 +13,7 @@ class Checksum {
         System.out.println("insert your hex-number to calculate checksum: ");
         userInputHex = scan.next();
         System.out.println("the checksum of your number " + userInputInt + " is: " + checksum(userInputInt, 10));
-        System.out.println("the checksum of your hex-number " + userInputHex + " is: " + checksumHex(userInputHex));
+        System.out.println("the checksum of your hex-number " + userInputHex + " is: " + checksumHex(userInputHex).toUpperCase());
     }
 
     public static int checksum(int x, int base) {
