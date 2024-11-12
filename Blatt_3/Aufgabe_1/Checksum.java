@@ -25,7 +25,7 @@ class Checksum {
             // add character to sum
             sum += lastChar;
             // remove last character
-            x = x / base;
+            x /= base;
         }
         return sum;
     }
