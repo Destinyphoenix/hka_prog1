@@ -6,8 +6,8 @@ class Heron10 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("insert your number: ");
-        double a = scanner.nextDouble();
-        heron10(a);
+        double userInput = scanner.nextDouble();
+        heron10(userInput);
     }
 
     public static void heron10(double a) {

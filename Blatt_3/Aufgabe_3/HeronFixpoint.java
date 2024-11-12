@@ -6,8 +6,8 @@ class HeronFixpoint {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("insert your number: ");
-        double a = scanner.nextDouble();
-        heronFixpoint(a);
+        double userInput = scanner.nextDouble();
+        heronFixpoint(userInput);
     }
 
     public static void heronFixpoint(double a) {
