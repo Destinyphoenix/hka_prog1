@@ -100,9 +100,20 @@ public class PlayingField {
         return false;
     }
 
+public boolean isEmptySlotLeft(){
+       for(Field[] field: fields){
+           for(Field f: field){
+               if(f.getStatus() == Status.E){
+                   System.out.println("no Winner");
+                   return true;
+               }
+           }
+       }
+       return false;
+}
 
     public boolean isGameOver() {
-        return isGameOverX() || isGameOverY() || isGameOverD();
+        return isGameOverX() || isGameOverY() || isGameOverD() || !isEmptySlotLeft();
     }
 
     public boolean isTurnValid(int x, int y, Status status) {
