@@ -22,7 +22,6 @@ public class PlayingField {
     }
 
     public void printPlayingField() {
-        fields[0][1].setStatus(Status.O);
         System.out.println();
         for (int x = 0; x < xMax; x++) {
             for (int y = 0; y < yMax; y++) {
