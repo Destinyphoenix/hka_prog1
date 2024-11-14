@@ -23,15 +23,30 @@ public class PlayingField {
 
     public void printPlayingField() {
         System.out.println();
-        for (int x = 0; x < xMax; x++) {
-            for (int y = 0; y < yMax; y++) {
+        System.out.println("x    0   1   2  ");
+        System.out.println("     ---------");
+        for (int y = 0; y < yMax; y++) {
+            System.out.print("y"+y+"|");
+            for (int x = 0; x < yMax; x++) {
                 System.out.print("  "+fields[x][y].getStatus()+" ");
             }
             System.out.println();
         }
     }
 
-    public void setField(int x, int y, Status status) {
-        fields[x][y].setStatus(status);
+    public boolean isTurnValid(int x, int y, Status status) {
+       if(x >= xMax || y >= yMax || x < 0 || y < 0) {
+           return false;
+       }
+        return fields[x][y].getStatus() == Status.E;
+    }
+
+    public boolean setField(int x, int y, Status status) {
+       if(isTurnValid(x, y,status)) {
+           fields[x][y].setStatus(status);
+           return true;
+       }
+        System.out.println("invalid turn, try again");
+       return false;
     }
 }
