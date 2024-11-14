@@ -6,26 +6,25 @@ public class main {
 
     public static void main(String[] args) {
         PlayingField playingField = new PlayingField(3,3);
-        /*System.out.println(playingField.getPlayingField().length);
+        Player[] players = addPlayers(2);
+        int turn = 0;
 
         playingField.printPlayingField();
 
-        playingField.setField(1,2,Status.X);
-        playingField.printPlayingField();
-*/
-        Player x = new Player();
-        System.out.println(x.getPlayerSymbol());
-
-        Player y = new Player();
-        System.out.println(y.getPlayerSymbol());
-
-        Player z = new Player();
-        printPlayerTurn(playingField ,x,1,0);
-        printPlayerTurn(playingField ,y,2,0);
-        playerTurn(playingField,x);
-
+        while(true){
+            playerTurn(playingField, players[turn%2]);
+            turn++;
+        }
+        //System.out.println("das Spiel hat "+ turn +" gedauert");
     }
 
+    public static Player[] addPlayers(int playerQuantity){
+        Player[] players = new Player[playerQuantity];
+        for (int i = 0; i < playerQuantity; i++) {
+                players[i] = new Player();
+        }
+        return players;
+    }
     public static void playerTurn(PlayingField playingField ,Player p){
         Scanner scan  = new Scanner(System.in);
         int x;
@@ -44,5 +43,6 @@ public class main {
         }
         playingField.printPlayingField();
     }
+
 
 }
