@@ -18,26 +18,21 @@ class FormatDemo {
         System.out.print(x + "; ");
 
         //Als Dezimalzahl
-        String Dezimalzahl = String.format("%+.2f", x*1.0 );
-        System.out.print(Dezimalzahl + "; ");
+        String signed_decimal = String.format("%+.2f", x*1.0 );
+        System.out.print(signed_decimal + "; ");
 
         //Als 8-stellige Hexadezimalzahl
-        String Hexzahl = String.format("%8X", x);
-        System.out.print("0x" + Hexzahl + "; ");
+        String eight_hexnumber = String.format("%8X", x);
+        System.out.print("0x" + eight_hexnumber + "; ");
 
         //Als 32-stellige Binärzahl
-        String Binzahl = Integer.toBinaryString(x);
-        String Binzahl_formatiert = String.format("%32s", Binzahl).replace(" ", "0");
-        System.out.print("0b" + Binzahl_formatiert + "; ");
+        String binnumber = Integer.toBinaryString(x);
+        String binnumber_formatiert = String.format("%32s", binnumber).replace(" ", "0");
+        System.out.print("0b" + binnumber_formatiert + "; ");
 
         //Als Dezimalzahl in eckigen Klammern
-        String Klammern = "[          ];";
-        String Dezzahl = Integer.toString(x);
-        StringBuilder SB = new StringBuilder(Klammern);
-        SB.replace(1, Dezzahl.length(), Dezzahl);
-        SB.replace(Klammern.length() - Dezzahl.length() - 1, Klammern.length() - 1, Dezzahl);
-        String Dezzahl_in_Klammern = SB.toString();
-        System.out.println(Dezzahl_in_Klammern);
+        String decimal_in_brackets = String.format("%-5s%5s", x, x);
+        System.out.println("[" + decimal_in_brackets + "]");
     }
 
     static void doubleFormatDemo(double d) {
@@ -45,15 +40,15 @@ class FormatDemo {
         System.out.print(d + "; ");
 
         //Als Dezimalzahl
-        String d_as_Dezzahl = String.format("%25.2f", d);
-        System.out.print(d_as_Dezzahl + "; ");
+        String d_with_two_decimals = String.format("%25.2f", d);
+        System.out.print(d_with_two_decimals + "; ");
 
         //Als Dezimalzahl in wissenschaftlicher Notation
-        String d_as_scientific_Dezzahl = String.format("%25.2e", d);
-        System.out.print(d_as_scientific_Dezzahl + "; ");
+        String d_as_scientific_decimal = String.format("%25.2e", d);
+        System.out.print(d_as_scientific_decimal + "; ");
 
         //Als Hexzahl in wissenschaftlicher Notation
-        String d_as_scientific_Hexzahl = String.format("%25.2a", d);
-        System.out.println(d_as_scientific_Hexzahl + "; ");
+        String d_as_scientific_hexnumber = String.format("%25.2a", d);
+        System.out.println(d_as_scientific_hexnumber + "; ");
     }
 }
