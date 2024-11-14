@@ -11,7 +11,7 @@ public class main {
 
         playingField.printPlayingField();
 
-        while(true){
+        while(!playingField.isGameOver()){
             playerTurn(playingField, players[turn%2]);
             turn++;
         }

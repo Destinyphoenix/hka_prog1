@@ -115,7 +115,6 @@ public class PlayingField {
     public boolean setField(int x, int y, Status status) {
        if(isTurnValid(x, y,status)) {
            fields[x][y].setStatus(status);
-           isGameOver();
            return true;
        }
         System.out.println("invalid turn, try again");
