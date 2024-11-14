@@ -18,21 +18,17 @@ class FormatDemo {
         System.out.print(x + "; ");
 
         //Als Dezimalzahl
-        double Dezimalzahl = x;
-        if (Dezimalzahl > 0) {
-            System.out.print("+" + Dezimalzahl + "; ");
-        }
-        else {
-            System.out.print(Dezimalzahl + "; ");
-        }
+        String Dezimalzahl = String.format("%+.2f", x*1.0 );
+        System.out.print(Dezimalzahl + "; ");
 
         //Als 8-stellige Hexadezimalzahl
-        String Hexzahl = String.format("%02X", x);
+        String Hexzahl = String.format("%8X", x);
         System.out.print("0x" + Hexzahl + "; ");
 
         //Als 32-stellige Binärzahl
         String Binzahl = Integer.toBinaryString(x);
-        System.out.print("0b" + Binzahl + "; ");
+        String Binzahl_formatiert = String.format("%32s", Binzahl).replace(" ", "0");
+        System.out.print("0b" + Binzahl_formatiert + "; ");
 
         //Als Dezimalzahl in eckigen Klammern
         String Klammern = "[          ];";
@@ -49,15 +45,15 @@ class FormatDemo {
         System.out.print(d + "; ");
 
         //Als Dezimalzahl
-        String d_as_Dezzahl = String.format("%22.2f", d);
+        String d_as_Dezzahl = String.format("%25.2f", d);
         System.out.print(d_as_Dezzahl + "; ");
 
         //Als Dezimalzahl in wissenschaftlicher Notation
-        String d_as_scientific_Dezzahl = String.format("%22.2e", d);
+        String d_as_scientific_Dezzahl = String.format("%25.2e", d);
         System.out.print(d_as_scientific_Dezzahl + "; ");
 
         //Als Hexzahl in wissenschaftlicher Notation
-        String d_as_scientific_Hexzahl = String.format("%22.2a", d);
+        String d_as_scientific_Hexzahl = String.format("%25.2a", d);
         System.out.println(d_as_scientific_Hexzahl + "; ");
     }
 }
