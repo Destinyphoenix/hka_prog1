@@ -24,9 +24,8 @@ class ComplexTest{
         Complex expectedValueDiv = new Complex(2,0);
 
         //create numbers to show i2 equals -1
-        Complex complexMulSpecial = new Complex(0,1);
-        Complex complexMulSpecial2 = new Complex(0,1);
-        Complex expectedValueMulSpecial = new Complex(-1,0);
+        Complex complexMuli2 = new Complex(0,1);
+        Complex expectedValueMuli2 = new Complex(-1,0);
 
         //calculate addition
         Complex sum = complexAdd.add(complexAdd2);
@@ -76,14 +75,14 @@ class ComplexTest{
 
 
         //calculate i2 equals -1
-        Complex mulSpecial = complexMulSpecial.mul(complexMulSpecial2);
+        Complex muli2 = complexMuli2.mul(complexMuli2);
 
         //check equality with expected value
-        if (mulSpecial.equals(expectedValueMulSpecial)) {
-            System.out.println("Multiplication of i2 is:" + mulSpecial + ". Ok");
+        if (muli2.equals(expectedValueMuli2)) {
+            System.out.println("Multiplication of i2 is:" + muli2 + ". Ok");
         }
-        else if (!mulSpecial.equals(expectedValueMulSpecial)) {
-            System.out.println("Multiplication of i2 is: FAILED: expected " + expectedValueMulSpecial + ", got " + mulSpecial);
+        else if (!muli2.equals(expectedValueMuli2)) {
+            System.out.println("Multiplication of i2 is: FAILED: expected " + expectedValueMuli2 + ", got " + muli2);
         }
 
     }

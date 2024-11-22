@@ -35,7 +35,7 @@ class Complex {
 
     //methode for division
     public Complex div(Complex other) {
-        return new Complex(((this.real * other.real) + (this.imag * other.imag)) / ((other.real * other.real) + (other.imag * other.imag)), ((this.imag * other.real) - (this.real * other.imag)) / ((other.real * other.real) + (other.imag * other.imag)));
+        return new Complex(((this.real * other.real) + (this.imag * other.imag)) / (Math.pow(other.real,2) + Math.pow(other.imag,2)), ((this.imag * other.real) - (this.real * other.imag)) / (Math.pow(other.real,2) + Math.pow(other.imag,2)));
     }
 
     //methode for equality
