@@ -1,5 +1,3 @@
-package Blatt_3.Aufgabe_2;
-
 class FormatDemo {
     public static void main(String[] args) {
         System.out.println("Aufgabe b),c),d):");
