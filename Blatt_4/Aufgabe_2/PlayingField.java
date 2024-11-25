@@ -104,11 +104,11 @@ public boolean isEmptySlotLeft(){
        for(Field[] field: fields){
            for(Field f: field){
                if(f.getStatus() == Status.E){
-                   System.out.println("no Winner");
                    return true;
                }
            }
        }
+    System.out.println("no Winner");
        return false;
 }
 

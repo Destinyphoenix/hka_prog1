@@ -11,11 +11,11 @@ public class main {
 
         playingField.printPlayingField();
 
-        while(!playingField.isGameOver()){
+       do{
             playerTurn(playingField, players[turn%2]);
             turn++;
-        }
-        //System.out.println("das Spiel hat "+ turn +" gedauert");
+        }while(!playingField.isGameOver());
+        System.out.println("das Spiel hat "+ turn +" Züge gedauert");
     }
 
     public static Player[] addPlayers(int playerQuantity){
