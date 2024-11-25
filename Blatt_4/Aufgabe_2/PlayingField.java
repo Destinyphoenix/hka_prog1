@@ -17,9 +17,6 @@ public class PlayingField {
         }
     }
 
-    public Field[][] getPlayingField() {
-        return fields;
-    }
 
     public void printPlayingField() {
         System.out.println();

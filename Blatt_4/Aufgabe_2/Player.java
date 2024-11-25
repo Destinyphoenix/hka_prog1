@@ -26,4 +26,7 @@ public class Player {
     public int getPlayerNumber() {
         return playerNumber;
     }
+    public static void resetPlayerCounter() {
+        players = 1;
+    }
 }
