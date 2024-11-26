@@ -14,7 +14,7 @@ public class A2Test {
         Player.resetPlayerCounter();
         players = addPlayers(2);
     }
-       @Test
+    @Test
     public void testGameStalemate(){
         PlayingField playingField = new PlayingField(3,3);
         int[] inputs = {
