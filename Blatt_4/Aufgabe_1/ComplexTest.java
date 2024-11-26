@@ -62,6 +62,18 @@ class ComplexTest{
         }
 
 
+        //calculate i2 equals -1
+        Complex muli2 = complexMuli2.mul(complexMuli2);
+
+        //check equality with expected value
+        if (muli2.equals(expectedValueMuli2)) {
+            System.out.println("Multiplication of " + complexMuli2 +  " and " + complexMuli2 + " is: " + muli2 + ". Ok");
+        }
+        else if (!muli2.equals(expectedValueMuli2)) {
+            System.out.println("Multiplication of " + complexMuli2 +  " and " + complexMuli2 + " is: FAILED: expected " + expectedValueMuli2 + ", got " + muli2);
+        }
+
+
         //calculate division
         Complex div = complexDiv.div(complexDiv2);
 
@@ -71,18 +83,6 @@ class ComplexTest{
         }
         else if (!div.equals(expectedValueDiv)) {
             System.out.println("Division of " + complexDiv +  " and " + complexDiv2 + " is: FAILED: expected " + expectedValueDiv + ", got " + div);
-        }
-
-
-        //calculate i2 equals -1
-        Complex muli2 = complexMuli2.mul(complexMuli2);
-
-        //check equality with expected value
-        if (muli2.equals(expectedValueMuli2)) {
-            System.out.println("Multiplication of i2 is:" + muli2 + ". Ok");
-        }
-        else if (!muli2.equals(expectedValueMuli2)) {
-            System.out.println("Multiplication of i2 is: FAILED: expected " + expectedValueMuli2 + ", got " + muli2);
         }
 
     }

@@ -16,6 +16,7 @@ class Complex {
     Complex() {
         this.real = 0.0;
         this.imag = 0.0;
+       // this(0.0,0.0);
     }
 
     //methode for addition
