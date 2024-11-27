@@ -60,6 +60,50 @@ public class A2Test {
         };
         playGame(playingField, inputs, players);
     }
+    @Test
+    public void testGameXWinHorizontal(){
+        PlayingField playingField = new PlayingField(3,3);
+
+        int[] inputs = {
+                0,0,
+                1,1,
+                1,0,
+                2,1,
+                2,0
+
+        };
+        playGame(playingField, inputs, players);
+    }
+    @Test
+    public void testGameXWinVertical(){
+        PlayingField playingField = new PlayingField(3,3);
+
+        int[] inputs = {
+                0,0,
+                1,1,
+                0,1,
+                1,2,
+                0,2
+
+        };
+
+        playGame(playingField, inputs, players);
+    }
+    @Test
+    public void testGameXWinDiagonal() {
+        PlayingField playingField = new PlayingField(3, 3);
+
+        int[] inputs = {
+                0, 0,
+                1, 0,
+                1, 1,
+                1, 2,
+                2, 2
+
+        };
+
+        playGame(playingField, inputs, players);
+    }
     private void playGame(PlayingField playingField, int[] inputs, Player[] players) {
         int j = 0;
         for (int i = 0; i < inputs.length-1; i+=2) {
