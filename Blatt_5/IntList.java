@@ -68,7 +68,10 @@ class IntList {
     //            }
     //        }
     //    }
-    public void remove(int x) {}
+    public void remove(int x) {
+        if (isEmpty()) return false;
+        ListCell i = this.head;
+    }
 
     public boolean contains(int x) {
         if (isEmpty()) return false;
