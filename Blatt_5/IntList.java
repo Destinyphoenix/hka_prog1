@@ -44,7 +44,10 @@ class IntList {
 
     public void addFirst(int x) {}
 
-    public Integer getFirst() {}
+    public Integer getFirst() {
+        if (isEmpty()) return null;
+        return head.content;
+    }
 
     public boolean dropFirst() {
         if (isEmpty()) return false;
