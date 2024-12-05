@@ -98,9 +98,9 @@ class IntList {
         if (isEmpty()) return;
         ListCell i = this.head;
         // if first item
-        if (i.content == x) {
+        while (head.content == x) {
             // if only one item on List .next should be null
-            this.head = i.next;
+            this.head = head.next;
             if (isEmpty()) return;
         }
         do {
