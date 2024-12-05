@@ -106,7 +106,7 @@ class IntList {
         do {
             if (i.next.content == x) {
                 i.next = i.next.next;
-            } else if (i.next != null) {
+            } else {
                 i = i.next;
             }
         } while (i.next != null);
@@ -145,11 +145,17 @@ class IntList {
         ListCell i = this.head;
         String result = "[";
         do {
-            result += " ";
-            result += String.valueOf(i.content);
+            if(i.next != null) {
+                result += String.valueOf(i.content);
+                result += ", ";
+            }else{
+
+                result += String.valueOf(i.content);
+            }
+
             i = i.next;
         } while (i != null);
-        result += " ]";
+        result += "]";
         return result;
     }
 }
