@@ -50,7 +50,14 @@ class IntList {
 
     public void addLast(int x) {}
 
-    public Integer getLast() {}
+    public Integer getLast() {
+        if (isEmpty()) return null;
+        ListCell i = this.head;
+        do {
+            i = i.next;
+        } while (i.next != null);
+        return i.content;
+    }
 
     public boolean dropLast() {
         if (isEmpty()) return false;
