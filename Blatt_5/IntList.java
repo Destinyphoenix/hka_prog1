@@ -42,7 +42,9 @@ class IntList {
         head = null;
     }
 
-    public void addFirst(int x) {}
+    public void addFirst(int x) {
+        this.head = new ListCell(x, this.head);
+    }
 
     public Integer getFirst() {
         if (isEmpty()) return null;
