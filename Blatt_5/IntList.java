@@ -54,6 +54,7 @@ class IntList {
     public boolean dropFirst() {
         if (isEmpty()) return false;
         this.head = this.head.next;
+        return true;
     }
 
     public void addLast(int x) {
@@ -71,9 +72,9 @@ class IntList {
     public Integer getLast() {
         if (isEmpty()) return null;
         ListCell i = this.head;
-        do {
+        while (i.next != null) {
             i = i.next;
-        } while (i.next != null);
+        }
         return i.content;
     }
 
@@ -98,11 +99,14 @@ class IntList {
         if (i.content == x) {
             // if only one item on List .next should be null
             this.head = i.next;
+            if (isEmpty()) return;
         }
         do {
             if (i.next.content == x) {
                 i.next = i.next.next;
-                //TODO check if last one can get removed safely
+            }
+            if (i.next != null) {
+                i = i.next;
             }
         } while (i.next != null);
     }
@@ -114,12 +118,13 @@ class IntList {
             if (i.content == x) return true;
             i = i.next;
         } while (i != null);
+        return false;
     }
 
     public int size() {
         if (isEmpty()) return 0;
         ListCell i = this.head;
-        int count;
+        int count = 0;
         do {
             count++;
             i = i.next;
