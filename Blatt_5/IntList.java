@@ -48,7 +48,14 @@ class IntList {
 
     public boolean dropFirst() {}
 
-    public void addLast(int x) {}
+    public void addLast(int x) {
+        if (isEmpty()) return null;
+        ListCell i = this.head;
+        do {
+            i = i.next;
+        } while (i.next != null);
+        i.next = new ListCell(x, null);
+    }
 
     public Integer getLast() {
         if (isEmpty()) return null;
