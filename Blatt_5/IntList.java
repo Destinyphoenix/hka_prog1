@@ -22,6 +22,7 @@ class IntList {
         }
 
         public boolean hasNext() {
+            if (isEmpty()) return false;
             return cursor.next != null;
         }
 
@@ -63,9 +64,9 @@ class IntList {
             return;
         }
         ListCell i = this.head;
-        do {
+        while (i.next != null) {
             i = i.next;
-        } while (i.next != null);
+        }
         i.next = new ListCell(x, null);
     }
 
@@ -84,6 +85,7 @@ class IntList {
         //if its only one item on the List
         if (i.next == null) {
             this.head = null;
+            if (isEmpty()) return false;
         }
         while (i.next.next != null) {
             i = i.next;
