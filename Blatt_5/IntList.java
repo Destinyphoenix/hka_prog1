@@ -70,9 +70,25 @@ class IntList {
     //    }
     public void remove(int x) {}
 
-    public boolean contains(int x) {}
+    public boolean contains(int x) {
+        if (isEmpty()) return false;
+        ListCell i = this.head;
+        do {
+            if (i.content == x) return true;
+            i = i.next;
+        } while (i != null);
+    }
 
-    public int size() {}
+    public int size() {
+        if (isEmpty()) return 0;
+        ListCell i = this.head;
+        int count;
+        do {
+            count++;
+            i = i.next;
+        } while (i != null);
+        return count;
+    }
 
     boolean isEmpty() {
         return this.head == null;
@@ -89,7 +105,7 @@ class IntList {
             result += " ";
             result += String.valueOf(i.content);
             i = i.next;
-        } while (i.next != null);
+        } while (i != null);
         result += " ]";
         return result;
     }
