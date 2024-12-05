@@ -85,7 +85,7 @@ class IntList {
         //if its only one item on the List
         if (i.next == null) {
             this.head = null;
-            if (isEmpty()) return false;
+            if (isEmpty()) return true;
         }
         while (i.next.next != null) {
             i = i.next;
