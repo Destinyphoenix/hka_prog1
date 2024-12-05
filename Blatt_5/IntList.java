@@ -52,25 +52,34 @@ class IntList {
 
     public Integer getLast() {}
 
-    public boolean dropLast() {}
-
-    //    public void remove(int x){
-    //        ListCell c= this.head;
-    //        while(c!=null && c.content == x){
-    //            head = c = c.next;
-    //        }
-    //        if(c==null)return;
-    //        while(c.next != null){
-    //            if(c.next.content == x){
-    //                c.next = c.next.next;
-    //            }else{
-    //                c = c.next;
-    //            }
-    //        }
-    //    }
-    public void remove(int x) {
+    public boolean dropLast() {
         if (isEmpty()) return false;
         ListCell i = this.head;
+        //if its only one item on the List
+        if (i.next == null) {
+            this.head = null;
+        }
+        while (i.next.next != null) {
+            i = i.next;
+        }
+        i.next = null;
+        return true;
+    }
+
+    public void remove(int x) {
+        if (isEmpty()) return;
+        ListCell i = this.head;
+        // if first item
+        if (i.content == x) {
+            // if only one item on List .next should be null
+            this.head = i.next;
+        }
+        do {
+            if (i.next.content == x) {
+                i.next = i.next.next;
+                //TODO check if last one can get removed safely
+            }
+        } while (i.next != null);
     }
 
     public boolean contains(int x) {
