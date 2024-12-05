@@ -33,7 +33,7 @@ class IntList {
         }
     }
 
-    public ListCell head;
+    private ListCell head;
 
     public Iterator iterator() {
         return new Iterator(head);
