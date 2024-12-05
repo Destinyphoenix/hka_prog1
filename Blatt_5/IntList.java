@@ -106,8 +106,7 @@ class IntList {
         do {
             if (i.next.content == x) {
                 i.next = i.next.next;
-            }
-            if (i.next != null) {
+            } else if (i.next != null) {
                 i = i.next;
             }
         } while (i.next != null);
