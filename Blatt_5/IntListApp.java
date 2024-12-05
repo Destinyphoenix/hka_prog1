@@ -1,3 +1,5 @@
+package Blatt_5;
+
 class IntListApp {
     public static void main(String[] args) {
 
@@ -27,9 +29,11 @@ class IntListApp {
         list.remove(1);
         System.out.println("list after removing 1: " + list);
         list.remove(5);
+        System.out.println("list after removing 5: " + list);
         list.remove(2);
+        System.out.println("list after removing 2: " + list);
         list.remove(3);
-        System.out.println("list after removing 5, 2 and 3: " + list);
+        System.out.println("list after removing 3: " + list);
         
         // Reverse the list and print it again.
         list.addLast(12);
@@ -37,7 +41,7 @@ class IntListApp {
         list.addLast(11);
         list.addFirst(14);
         System.out.println("list after adding 11, 12, 13 and 14: " + list);
-        list.reverse();
+        //list.reverse();
         System.out.println("reversed list: " + list);
         
         // Elements of the list should now be ascending
