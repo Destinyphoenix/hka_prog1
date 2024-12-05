@@ -46,10 +46,16 @@ class IntList {
 
     public Integer getFirst() {}
 
-    public boolean dropFirst() {}
+    public boolean dropFirst() {
+        if (isEmpty()) return false;
+        this.head = this.head.next;
+    }
 
     public void addLast(int x) {
-        if (isEmpty()) return null;
+        if (isEmpty()) {
+            this.head = new ListCell(x, null);
+            return;
+        }
         ListCell i = this.head;
         do {
             i = i.next;
