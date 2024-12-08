@@ -1,0 +1,18 @@
+a)  - Die abstrakten Methoden sind abstrakt, da die Konvertierung eines numerischen Werts in unterschiedliche primitive Datentypen
+      wie int, long, float oder double von der spezifischen Implementierung in den Unterklassen abhängt. Das gibt Flexibilität.
+      Beipiel: in der Klasse Integer wird bei intValue() direkt der int Wert zurückgegeben. Bei der Klasse Double wird der int Wert in einen double Wert konvertiert.
+
+    - Ein Grund für eine Superklasse ist die Flexibilität. Programmierer können allgemeine Methoden und Algorithmen für numerische Datentypen schreiben.
+
+
+b)  - BYTES, MAX_VALUE, MIN_VALUE, SIZE, TYPE
+
+    - bitCount: Gibt die Anzahl der Einsen in der Zweierkomplementdarstellung des angegebenen int-Werts zurück.
+      rotateLeft: Gibt den Wert zurück, der durch Rotation der binären Zweierkomplementdarstellung des angegebenen int-Werts um die angegebene Anzahl von Bits nach links erhalten wird.
+      numberOFTrailingZeros: Gibt die Anzahl der Nullen nach der niederwertigesten Eins ("rightmost") des in binärer Zweierkomplementdarstellung angegebenen int-Werts zurück.
+      reverse: Gibt den Wert zurück, der durch Umkehren der Bitreihenfolge in der Zweierkomplement-Binärdarstellung des angegebenen int-Werts erhalten wird.
+
+c)  - BigInteger: Für ganze Zahlen beliebiger Größe. (also nicht auf 32-Bit beschränkt, sondern theoretisch durch den gesamten Computerspeicher).
+      BigDecimal: Für präzise Berechnungen mit vielen Nachkommastellen, wie bei BigInteger, mit theoretische unbegrenztem Speicherplatz.
+
+d)  - Das ist ausreichend, da der BigInteger quasi unbegrenzten Speicherplatz hat aber die Eingabe durch die 32-Bit Länge des Integers begrenzt ist.
