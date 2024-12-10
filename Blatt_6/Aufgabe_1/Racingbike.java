@@ -2,14 +2,13 @@ package Aufgabe_1;
 
 public class Racingbike extends Bike{
 
-    public Racingbike(String name, String frameColor, String frameMaterial, String brakes, String gearShift) {
-        super(name, frameColor, frameMaterial, brakes, gearShift);
+    public Racingbike(String name, Frame frame, Brakes brakes, gearShift gearShift) {
+        super(name, frame, brakes, gearShift);
     }
 
     public String toString() {
         return getName() + "\n"
-                + getFrameColor() + "\n"
-                + getFrameMaterial() + "\n"
+                + getFrame() + "\n"
                 + getBrakes() + "\n"
                 + getGearShift() + "\n";
     }

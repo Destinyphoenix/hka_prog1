@@ -1,8 +1,7 @@
 package Aufgabe_1;
 
-public class Citybike extends Bike{
-
-    public Citybike(String name, Frame frame, Brakes brakes, gearShift gearShift) {
+public class EMountainbike extends Mountainbike{
+    public EMountainbike(String name, Frame frame, Brakes brakes, gearShift gearShift) {
         super(name, frame, brakes, gearShift);
     }
 

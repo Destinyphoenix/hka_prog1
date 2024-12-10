@@ -1,18 +1,16 @@
 package Aufgabe_1;
 
-public class Bike {
+abstract class Bike {
     //Attribute
     private String name;
-    private String frameColor;
-    private String frameMaterial;
-    private String brakes;
-    private String gearShift;
+    private Frame frame;
+    private Brakes brakes;
+    private gearShift gearShift;
 
     //Construktor
-    public Bike(String name, String frameColor, String frameMaterial, String brakes, String gearShift) {
+    public Bike(String name, Frame frame, Brakes brakes, gearShift gearShift) {
         this.name = name;
-        this.frameColor = frameColor;
-        this.frameMaterial = frameMaterial;
+        this.frame = frame;
         this.brakes = brakes;
         this.gearShift = gearShift;
     }
@@ -25,28 +23,23 @@ public class Bike {
         this.name = newName;
     }
 
-    public String getFrameColor() {
-        return this.frameColor;
-    }
-
-    public String getFrameMaterial() {
-        return this.frameMaterial;
+    public String getFrame() {
+        return frame.toString();
     }
 
     public String getBrakes() {
-        return this.brakes;
+        return brakes.toString();
     }
 
     public String getGearShift() {
-        return this.gearShift;
+        return gearShift.toString();
     }
 
 
 
     public String toString() {
         return "Name des Fahrrads: " + this.name
-                + "\nRahmenfarbe: " + this.frameColor
-                + "\nRahmenmaterial: " + this.frameMaterial
+                + "\nRahmenmaterial: " + this.frame
                 + "\nBremsen: " + this.brakes
                 + "\nSchaltung: " + this.gearShift;
     }
