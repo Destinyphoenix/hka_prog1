@@ -1,4 +1,0 @@
-Die Einteilung in privat und public ist sinnvoll.
-Nur die Public Methoden und Variablen lassen sich von außen ansteuern. Das ist beispielsweise bei der Liste oder dem Iterator gut,
-da nur über von uns festgelegte Methoden die Liste verändert werden kann. So kann verhindert werden, dass ungewünschte Änderungen auftreten.
-Im endeffekt kann nur das verwendet werden, was dazu gedacht ist bzw. was für die Funktion benötigt wird. Alles andere ist privat.
