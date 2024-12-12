@@ -10,13 +10,15 @@ public interface Stack<E> {
 
     /**
      *
-     * @return and remove top most Element of DeclaredType from the Stack
+     * @return and remove top most {@code Element} of DeclaredType from the Stack
+     * or if the Stack is empty {@code null}
      */
     public E pop();
 
     /**
      *
-     * @return top most Element of DeclaredType from the Stack
+     * @return  top most {@code Element} of DeclaredType from the Stack
+     * or if the stack is empty {@code null}
      */
     public E top();
 
