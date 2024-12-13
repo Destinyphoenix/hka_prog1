@@ -6,6 +6,10 @@ package Blatt_6;
  */
 
 public interface Stack<E> {
+    /**
+     * add new element to top of List
+     *@param a single element of in Stack declared type
+     **/
     public void push(E element);
 
     /**
