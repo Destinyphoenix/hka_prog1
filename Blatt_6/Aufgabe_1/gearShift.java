@@ -1,4 +1,4 @@
-package Aufgabe_1;
+package Blatt_6;
 
 public class gearShift {
     private String gearType;

@@ -1,4 +1,4 @@
-package Aufgabe_1;
+package Blatt_6;
 
 public class ECitybike extends Citybike{
     public ECitybike(String name, Frame frame, Brakes brakes, gearShift gearShift) {
