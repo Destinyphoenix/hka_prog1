@@ -4,7 +4,7 @@ package Blatt_6.Aufgabe_1;
 
     private String brakeType;
 
-    public void Brakes(String brakeType) {
+    public  Brake(String brakeType) {
         this.brakeType = brakeType;
     }
 

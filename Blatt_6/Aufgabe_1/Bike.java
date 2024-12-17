@@ -4,14 +4,14 @@ abstract class Bike {
     //Attribute
     private String name;
     private Frame frame;
-    private Brakes brakes;
+    private Brake brake;
     private gearShift gearShift;
 
     //Construktor
-    public Bike(String name, Frame frame, Brakes brakes, gearShift gearShift) {
+    public Bike(String name, Frame frame, Brake brake, gearShift gearShift) {
         this.name = name;
         this.frame = frame;
-        this.brakes = brakes;
+        this.brake = brake;
         this.gearShift = gearShift;
     }
 
@@ -27,8 +27,8 @@ abstract class Bike {
         return frame.toString();
     }
 
-    public String getBrakes() {
-        return brakes.toString();
+    public String getBrake() {
+        return brake.toString();
     }
 
     public String getGearShift() {
@@ -40,7 +40,7 @@ abstract class Bike {
     public String toString() {
         return "Name des Fahrrads: " + this.name
                 + "\nRahmenmaterial: " + this.frame
-                + "\nBremsen: " + this.brakes
+                + "\nBremsen: " + this.brake
                 + "\nSchaltung: " + this.gearShift;
     }
 }
