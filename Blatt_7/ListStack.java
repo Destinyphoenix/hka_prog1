@@ -19,19 +19,19 @@ public class ListStack<E> implements Stack<E>, Iterable<E> {
 
     @Override
     public void push(E element) {
-        elements.add(element);
+        elements.addFirst(element);
     }
 
     @Override
     public E pop() {
         if (isEmpty()) return null;
-        return elements.removeLast();
+        return elements.removeFirst();
     }
 
     @Override
     public E top() {
         if (isEmpty()) return null;
-        return elements.getLast();
+        return elements.getFirst();
     }
 
     @Override
