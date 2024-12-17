@@ -1,4 +1,4 @@
-package Blatt_6;
+package Blatt_6.Aufgabe_1;
 
 public class EMountainbike extends Mountainbike{
     public EMountainbike(String name, Frame frame, Brakes brakes, gearShift gearShift) {

@@ -1,8 +1,8 @@
-package Blatt_6;
+package Blatt_6.Aufgabe_1;
 
 public class Citybike extends Bike{
 
-    public Citybike(String name, Frame frame, Brakes brakes, gearShift gearShift) {
+    public Citybike(String name, Frame frame, Brake brakes, gearShift gearShift) {
         super(name, frame, brakes, gearShift);
     }
 

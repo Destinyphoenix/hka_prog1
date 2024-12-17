@@ -1,10 +1,10 @@
-package Blatt_6;
+package Blatt_6.Aufgabe_1;
 
- abstract Brake  {
+ abstract class Brake  {
 
     private String brakeType;
 
-    public Brakes(String brakeType) {
+    public void Brakes(String brakeType) {
         this.brakeType = brakeType;
     }
 

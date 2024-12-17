@@ -1,4 +1,4 @@
-package Blatt_6;
+package Blatt_6.Aufgabe_1;
 
 
 
@@ -20,7 +20,7 @@ class Main {
         Bike Fahrrad_3 = new ECitybike(
             "Fahrrad_3",
             new Frame("Alu", "weiß"),
-            new Brakes("Trommelbremsen"),
+            new Trommelbremse("Trommelbremsen"),
             new gearShift("Nabenschaltung")
         );
 

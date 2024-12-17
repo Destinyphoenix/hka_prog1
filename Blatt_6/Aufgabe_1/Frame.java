@@ -1,4 +1,4 @@
-package Blatt_6;
+package Blatt_6.Aufgabe_1;
 
 public class Frame {
     private String frameColor;
