@@ -47,9 +47,7 @@ public class ArrayStack<E> implements Stack<E> {
 
     @Override
     public E pop() {
-        if (size == 0) {
-            return null;
-        }
+        if (isEmpty()) return null;
         size--;
         E value = elements[size];
         resizeIfNeeded();
@@ -58,16 +56,17 @@ public class ArrayStack<E> implements Stack<E> {
 
     @Override
     public E top() {
-        return null;
+        if(isEmpty()) return null;
+        return elements[size - 1];
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 }
