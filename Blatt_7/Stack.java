@@ -1,4 +1,4 @@
-package Blatt_6;
+package Blatt_7;
 
 /**
  * A First in Last out Stack of Elements of a to be declared type

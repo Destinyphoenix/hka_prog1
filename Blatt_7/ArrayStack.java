@@ -1,6 +1,5 @@
-package Blatt_6;
+package Blatt_7;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ArrayStack<E> implements Stack<E> {
@@ -19,11 +18,11 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     public int checkConsumedCapacity() {
-        //result in % filled
-
-        float resultF = (float) size / capacity * 10;
+        // Calculate percentage of capacity filled
+        System.out.println("size: " + size + " cap" + capacity);
+        float resultF = ((float) size / capacity) * 100;
         int result = (int) resultF;
-        if (size / capacity == 1) result = 100;
+        if ((float) size / capacity == 1) result = 100;
         System.out.println(result + "%");
         return result;
     }
@@ -48,7 +47,13 @@ public class ArrayStack<E> implements Stack<E> {
 
     @Override
     public E pop() {
-        return null;
+        if (size == 0) {
+            return null;
+        }
+        size--;
+        E value = elements[size];
+        resizeIfNeeded();
+        return value;
     }
 
     @Override
