@@ -29,4 +29,22 @@ public class TestArrayStack {
         intStack.push(9);
         Assertions.assertEquals(9, intStack.pop());
     }
-}
+        @Test
+        public void testStringPushAndPop() {
+            ArrayStack<String> stringStack = new ArrayStack();
+            stringStack.push("a");
+            stringStack.push("b");
+            stringStack.push("c");
+            stringStack.push("d");
+            stringStack.push("e");
+            Assertions.assertEquals("e", stringStack.pop());
+            Assertions.assertEquals("d", stringStack.pop());
+            Assertions.assertEquals("c", stringStack.pop());
+            Assertions.assertEquals("b", stringStack.pop());
+            Assertions.assertEquals("a", stringStack.pop());
+            Assertions.assertNull(stringStack.pop());
+            stringStack.push("f");
+            Assertions.assertEquals("f", stringStack.pop());
+        }
+    }
+
