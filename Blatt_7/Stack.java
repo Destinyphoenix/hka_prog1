@@ -1,4 +1,4 @@
-package Blatt_6;
+package Blatt_7;
 
 /**
  * A First in Last out Stack of Elements of a to be declared type
@@ -6,6 +6,10 @@ package Blatt_6;
  */
 
 public interface Stack<E> {
+    /**
+     * add new element to top of List
+     *@param a single element of in Stack declared type
+     **/
     public void push(E element);
 
     /**
