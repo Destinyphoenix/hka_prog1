@@ -1,0 +1,4 @@
+die Ergebnisse bei Iterativ sind korrekt bis zur Stelle
+46: 1836311903
+danach gibt es einen Stack Overflow, da die darauffolgende Zahl über dem int Limit von 2147483647 liegt. Das hat zur folge, dass die nächste Zahl negativ ist.
+47: -1323752223 statt 297121507
