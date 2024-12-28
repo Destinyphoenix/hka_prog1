@@ -3,11 +3,12 @@ package Blatt_8;
 public class Fibonacci {
 
     public static void main(String[] args) {
-        int n = 100;
+        // int n = 100;
 
-        for (int i = 1; i <= n; i++) {
-            System.out.println(i + ": " + fibonacciIter(i));
-        }
+        //for (int i = 1; i <= n; i++) {
+        //   System.out.println(i + ": " + fibonacciIter(i));
+        // }
+        System.out.println(fibonacciRec(4));
     }
 
     public static int fibonacciIter(int n) {
@@ -25,7 +26,13 @@ public class Fibonacci {
         return f3;
     }
 
-    public int fibonacciRec(int n) {
-        return 0;
+    public static int fibonacciRec(int n) {
+        if (n <= 0) {
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
+        }
+        return fibonacciRec(n - 1) + fibonacciRec(n - 2);
     }
 }
