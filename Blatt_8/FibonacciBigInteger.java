@@ -4,16 +4,6 @@ import java.math.BigInteger;
 
 public class FibonacciBigInteger {
 
-    public static void main(String[] args) {
-        int n = 48;
-
-        for (int i = 1; i <= n; i++) {
-            System.out.println(i + ": " + fibonacciIter(i));
-        }
-        System.out.println(fibonacciRec(48));
-        //System.out.println(fibonacciRec(4));
-    }
-
     public static BigInteger fibonacciIter(int n) {
         if (n <= 0) {
             return BigInteger.valueOf(0);

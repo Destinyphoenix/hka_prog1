@@ -4,15 +4,6 @@ import java.math.BigInteger;
 
 public class Fibonacci {
 
-    public static void main(String[] args) {
-        int n = 100;
-
-        for (int i = 1; i <= n; i++) {
-            System.out.println(i + ": " + fibonacciIter(i));
-        }
-        //System.out.println(fibonacciRec(4));
-    }
-
     public static int fibonacciIter(int n) {
         if (n <= 0) {
             return 0;
