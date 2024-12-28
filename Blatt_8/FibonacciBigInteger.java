@@ -28,4 +28,22 @@ public class FibonacciBigInteger {
         }
         return fibonacciRec(n - 1).add(fibonacciRec(n - 2));
     }
+
+    public static void measureExecuteTimeFibonacciRec(int i) {
+        long start = System.nanoTime();
+        fibonacciRec(i);
+        long end = System.nanoTime();
+        long duration = end - start;
+        double durationMs = duration / 1_000_000.0; // Convert to milliseconds
+
+        // Truncate to 3 decimal places
+        long truncatedDuration = (long) (durationMs * 1000);
+        durationMs = truncatedDuration / 1000.0;
+
+        System.out.println(
+                "Fibonacci Recursive time: "
+                        + durationMs + " ms"
+        );
+    }
+
 }

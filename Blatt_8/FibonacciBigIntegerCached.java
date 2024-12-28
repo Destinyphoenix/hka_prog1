@@ -45,4 +45,37 @@ public class FibonacciBigIntegerCached {
         cache[n] = fibonacciRec(n - 1, cache).add(fibonacciRec(n - 2, cache));
         return cache[n];
     }
+
+    public static void measureExecuteTimeFibonacciRec(int i) {
+        long start = System.nanoTime();
+        fibonacciRec(i);
+        long end = System.nanoTime();
+        long duration = end - start;
+        double durationMs = duration / 1_000_000.0; // Convert to milliseconds
+
+        // Truncate to 3 decimal places
+        long truncatedDuration = (long) (durationMs * 1000);
+        durationMs = truncatedDuration / 1000.0;
+
+        System.out.println(
+                "Fibonacci Cached Recursive time: "
+                        + durationMs + " ms"
+        );
+    }
+    public static void measureExecuteTimeFibonacciIter(int i) {
+        long start = System.nanoTime();
+        fibonacciIter(i);
+        long end = System.nanoTime();
+        long duration = end - start;
+        double durationMs = duration / 1_000_000.0; // Convert to milliseconds
+
+        // Truncate to 3 decimal places
+        long truncatedDuration = (long) (durationMs * 1000);
+        durationMs = truncatedDuration / 1000.0;
+
+        System.out.println(
+                "Fibonacci Iterative time: "
+                        + durationMs + " ms"
+        );
+    }
 }
