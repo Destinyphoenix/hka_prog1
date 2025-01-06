@@ -1,2 +1,3 @@
-es gibt zwei grenzen, einmal eine maximale Rekursive Tiefe welche einen StackOverflow fehler hervorbringt. Bei meinem System beträte dieser Wert 17482 oder bei n = 9169.
-Oder wenn der Heap space aufgebraucht ist, was eine OutOfMemoryError zur folge hat. Das passirt allerdings erst bei n in millionen höhe.
+Es gibt zwei Grenzen, einmal eine maximale rekursive Tiefe welche einen StackOverflow Fehler hervorbringt. Bei meinem System beträgt dieser Wert 17482 oder bei n = 9169.
+Die andere Grenze ist, wenn der Heap space aufgebraucht ist, was eine OutOfMemoryError zur Folge hat. Das passiert allerdings erst bei n in Millionenhöhe.
+
