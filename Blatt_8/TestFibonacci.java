@@ -211,4 +211,13 @@ public class TestFibonacci {
             //System.out.println(i + ": " + Fibonacci.fibonacciRec(i));
         }
     }
+    @Test
+    public void testRecursiveBigIntCached(){
+        for (int i = 0; i <= 100; i++) {
+            Assertions.assertEquals(
+                    getFibonacciNumbersBigInt(i),
+                    FibonacciBigIntegerCached.fibonacciRec(i)
+            );
+        }
+    }
 }

@@ -1,0 +1,5 @@
+um die Stackgröße anzupassen kann der Xss Befehl auf der Konsole genutzt werden z.b.:
+
+java -Xss1m
+
+um die Stackgröße auf 1MB zu setzten

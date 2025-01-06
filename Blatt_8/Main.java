@@ -1,5 +1,6 @@
 package Blatt_8;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
@@ -16,8 +17,12 @@ public class Main {
                 "it: " + FibonacciBigInteger.fibonacciIter(userInput)
             );
             System.out.println(
-                "rec: " + FibonacciBigInteger.fibonacciRec(userInput)
+                // "rec: " + FibonacciBigInteger.fibonacciRec(userInput)
+                "rec: " + FibonacciBigIntegerCached.fibonacciRec(userInput)
             );
         }
+        FibonacciBigIntegerCached.measureExecuteTimeFibonacciIter(userInput);
+        FibonacciBigIntegerCached.measureExecuteTimeFibonacciRec(userInput);
+        FibonacciBigInteger.measureExecuteTimeFibonacciRec(userInput);
     }
 }
