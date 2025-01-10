@@ -24,12 +24,15 @@ class CharacterCounter {
         int words = 0;
         int chars = 0;
 
+        //split lines
         String[] lineArray = content.split("\n");
         lines = lineArray.length;
 
         for (String line : lineArray) {
+            //remove whitespaces in fron and back
             String trimmedLine = line.trim();
             if (!trimmedLine.isEmpty()) {
+                //count characters and words (with regex argument)
                 words += trimmedLine.split("\\s+").length;
                 chars += trimmedLine.length();
             }
@@ -38,6 +41,7 @@ class CharacterCounter {
     }
 
     public static void main(String[] args) {
+        //test whether an args is specified
         if (args.length < 1) {
             System.out.println("Bitte geben Sie den Dateinamen als Argument an.");
             return;

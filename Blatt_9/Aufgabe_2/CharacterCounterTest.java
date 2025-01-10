@@ -7,7 +7,36 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CharacterCounterTest {
     @Test
-    void testFile1() throws IOException {
+    void testReadFileContent_EmptyFile() throws IOException {
+        CharacterCounter counter = new CharacterCounter();
+        String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/emptyFile.txt");
+
+        assertEquals("", content);
+    }
+
+    @Test
+    void testReadFileContent_SmallFile() throws IOException {
+        String expectedContent = "Hallo Welt!\nDies ist ein Text.\n";
+        CharacterCounter counter = new CharacterCounter();
+
+        String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/smallFile.txt");
+
+        assertEquals(expectedContent, content);
+    }
+
+    @Test
+    void testReadFileContent_MissingFile() {
+        CharacterCounter counter = new CharacterCounter();
+
+        Exception exception = assertThrows(IOException.class, () -> {
+            counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/noFile.txt");
+        });
+
+        assertTrue(exception.getMessage().contains("noFile.txt"));
+    }
+
+    @Test
+    void testCounterFile1() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/shorttext_1.txt");
         Counter result = counter.count(content);
@@ -17,7 +46,7 @@ class CharacterCounterTest {
         assertEquals(58, result.getCharacters());
     }
     @Test
-    void testFile2() throws IOException {
+    void testCounterFile2() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/shorttext_2.txt");
         Counter result = counter.count(content);
@@ -28,7 +57,7 @@ class CharacterCounterTest {
     }
 
     @Test
-    void testFile3() throws IOException {
+    void testCounterFile3() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/shorttext_3.txt");
         Counter result = counter.count(content);
@@ -39,7 +68,7 @@ class CharacterCounterTest {
     }
 
     @Test
-    void testFile4() throws IOException {
+    void testCounterFile4() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/mediumtext_1.txt");
         Counter result = counter.count(content);
@@ -50,7 +79,7 @@ class CharacterCounterTest {
     }
 
     @Test
-    void testFile5() throws IOException {
+    void testCounterFile5() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/mediumtext_2.txt");
         Counter result = counter.count(content);
@@ -61,7 +90,7 @@ class CharacterCounterTest {
     }
 
     @Test
-    void testFile6() throws IOException {
+    void testCounterFile6() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/mediumtext_3.txt");
         Counter result = counter.count(content);
@@ -72,7 +101,7 @@ class CharacterCounterTest {
     }
 
     @Test
-    void testFile7() throws IOException {
+    void testCounterFile7() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/longtext_1.txt");
         Counter result = counter.count(content);
@@ -83,7 +112,7 @@ class CharacterCounterTest {
     }
 
     @Test
-    void testFile8() throws IOException {
+    void testCounterFile8() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/longtext_2.txt");
         Counter result = counter.count(content);
@@ -94,7 +123,7 @@ class CharacterCounterTest {
     }
 
     @Test
-    void testFile9() throws IOException {
+    void testCounterFile9() throws IOException {
         CharacterCounter counter = new CharacterCounter();
         String content = counter.readFileContent("Blatt_9/Aufgabe_2/Test_Files/longtext_3.txt");
         Counter result = counter.count(content);
