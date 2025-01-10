@@ -1,0 +1,3 @@
+   Das   ist ein   Test mit  unregelmäßigem   Leerzeichen.  
+
+Noch eine Zeile mit Text.    
