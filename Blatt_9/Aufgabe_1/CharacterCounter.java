@@ -3,7 +3,7 @@ package Blatt_9.Aufgabe_1;
 import java.io.*;
 
 
-public class CharacterCounter {
+class CharacterCounter {
 
     String readFileContent(String filename) throws IOException {
         StringBuilder builder = new StringBuilder();
