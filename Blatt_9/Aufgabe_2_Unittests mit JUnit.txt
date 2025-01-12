@@ -1,0 +1,5 @@
+Blatt_9 Aufgabe 2
+Bei readFileContent kann die Datei solange sie nicht leer ist oder ein falscher Pfad angegeben ist gelesen werden. Durch die eingebauten Exceptions reicht werden eigentlich alle Fehler abgedeckt.
+Danach habe ich testweise für die readFileContent Methode den TestText kopiert und als gesamten String auch noch in einen assertEquals gepackt. Jedoch kam dann eine Exception.
+Somit schau ich einfach nur, ob der String leer ist oder nicht.
+Bei count fallen gleich mehr Möglichkeiten ein, die Methode zu testen. Alle Attribute des CounterObjektes werden dort verglichen mit festen erwarteten Werten.

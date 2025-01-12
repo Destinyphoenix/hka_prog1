@@ -1,0 +1,2 @@
+Das ist ein Test
+für JUnits...!
