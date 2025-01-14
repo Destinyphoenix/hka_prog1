@@ -48,7 +48,7 @@ public class CharacterCounter {
 
 
     public static void main(String[] args) throws IOException {
-        String fileName = "/Users/simon/Developer/hka_prog1/Blatt_9/InputStream.txt";
+        String fileName = "/Users/simon/Developer/hka_prog1/Blatt_9/Aufgabe_2_Unittests mit JUnit.txt";
         String fileContent = "";
         try {
             fileContent = readFileContent(fileName);
