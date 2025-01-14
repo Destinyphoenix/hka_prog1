@@ -1,0 +1,8 @@
+Dies ist eine längere Datei mit mehr Zeilen und komplexeren Inhalten.
+Hier sind zusätzliche Wörter, um die Wortanzahl zu erhöhen.
+Der Zweck dieser Datei ist es, das Programm auf größere Eingaben zu testen.
+Einige Zeilen enthalten viele Wörter, während andere weniger Wörter haben.
+Zum Beispiel enthält diese Zeile mehr Wörter als die vorherige.
+Whitespace kann auch eine Herausforderung sein.  Hier gibt es   viele  unnötige   Leerzeichen.
+
+Am Ende sollte die Analyse korrekt sein, unabhängig vom Inhalt.
