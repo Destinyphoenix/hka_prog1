@@ -43,7 +43,7 @@ class CharacterCounter {
     public static void main(String[] args) {
         //test whether an args is specified
         if (args.length < 1) {
-            System.out.println("Bitte geben Sie den Dateinamen als Argument an.");
+            System.out.println("Please insert filename as argument.");
             return;
         }
 
@@ -55,6 +55,7 @@ class CharacterCounter {
             String content = counter.readFileContent(filename);
             Counter result = counter.count(content);
 
+            //System.out.println(content);
             System.out.println("Number of lines: " + result.getLines());
             System.out.println("Number of words: " + result.getWords());
             System.out.println("Number of characters: " + result.getCharacters());
