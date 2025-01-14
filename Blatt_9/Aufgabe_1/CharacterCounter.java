@@ -62,7 +62,7 @@ class CharacterCounter {
         } catch (FileNotFoundException e) {
             System.err.println("File " + filename + " not found.");
         } catch (IOException e) {
-            System.err.println("Fault: " + e.getMessage());
+            System.err.println("IO-fault: " + e.getMessage());
         }
     }
 }
